@@ -15,7 +15,7 @@ namespace GabrielCampbellEAE2420WeekThree
         static void Main(string[] args)
         {
             List<int> orderedList = new List<int> { 1, 2, 3, 4, 6, 7, 8, 9 };
-            List<int> unorderedList = new List<int> { 5, 1, 3, 8, 0, 6, 9, 2, 4, 7 };
+            List<int> unorderedList = new List<int> { 5, 1, 3, 0, 6, 2, 4, 7 };
 
             //Question 1:
             //Console.WriteLine(ReturnIndexGreaterOrEqual(5, orderedList));
@@ -40,7 +40,7 @@ namespace GabrielCampbellEAE2420WeekThree
             //    Console.Write(item + " ");
             //}
 
-
+            MergeSort.Sort(unorderedList);
 
             Console.ReadKey();
 
