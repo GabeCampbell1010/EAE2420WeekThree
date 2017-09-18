@@ -17,16 +17,30 @@ namespace GabrielCampbellEAE2420WeekThree
             List<int> orderedList = new List<int> { 1, 2, 3, 4, 6, 7, 8, 9 };
             List<int> unorderedList = new List<int> { 5, 1, 3, 8, 0, 6, 9, 2, 4, 7 };
 
+            //Question 1:
             //Console.WriteLine(ReturnIndexGreaterOrEqual(5, orderedList));
-
             //PrintList(orderedList);
             //Shift(ref orderedList, 4);
             //Insertion(ref orderedList, 5);
             //PrintList(orderedList);
-
             //PrintList(Random(5));
+            //CreateAndInsert();
 
-            CreateAndInsert();
+            //BubbleSort:
+            //foreach (int n in BubbleSort.Sort(unorderedList))
+            //{
+            //    Console.Write(n + " ");
+            //}
+            //Console.WriteLine();
+
+            //InsertionSort:
+            //List<int> insertionSortedList = InsertionSort.Sort(unorderedList);
+            //foreach (int item in insertionSortedList)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+
 
             Console.ReadKey();
 
