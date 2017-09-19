@@ -40,7 +40,23 @@ namespace GabrielCampbellEAE2420WeekThree
             //    Console.Write(item + " ");
             //}
 
-            MergeSort.Sort(unorderedList);
+            //MergeSort
+            //int[] array = new int[] { 9, 8, 5, 4, 1, 2, 7, 0, 3, 6 };
+            //MergeSort.Sort(array);
+            //foreach (var n in array)
+            //{
+            //    Console.Write(n + " ");
+            //}
+
+            //QuickSort
+            int[] arrayQuick = new int[] { 9, 8, 5, 4, 1, 2, 7, 0, 3, 6 };
+            QuickSort.Sort(arrayQuick);
+            foreach (var n in arrayQuick)
+            {
+                Console.Write(n + " ");
+            }
+
+
 
             Console.ReadKey();
 

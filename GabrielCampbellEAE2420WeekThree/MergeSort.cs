@@ -1,14 +1,74 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielCampbellEAE2420WeekThree
 {
+    
+
     class MergeSort
     {
-        public static List<int> Sort(List<int> list)
+        public static void Merge(int[] array, int[] helperArray, int low, int mid, int high)
+        {
+
+            for (int l = low; l <= high; l++)//copy array over to helper array to use below
+            {
+                helperArray[l] = array[l];
+            }
+
+            int m = low;
+            int n = mid + 1;
+
+            for (int k = low; k <= high; k++)
+            {
+                if (m > mid)
+                {
+                    array[k] = helperArray[n++];
+                }
+                else if (n > high)
+                {
+                    array[k] = helperArray[m++];
+                }
+                else if (helperArray[n] < helperArray[m])
+                {
+                    array[k] = helperArray[n++];
+                }
+                else
+                {
+                    array[k] = helperArray[m++];
+                }
+            }
+            
+        }
+
+        public static void Sort(int[] array, int[] helperArray, int low, int high)
+        {
+            if (high <= low) return;
+            int mid = low + (high - low) / 2;
+            Sort(array, helperArray, low, mid);
+            Sort(array, helperArray, mid + 1, high);
+            Merge(array, helperArray, low, mid, high);
+
+        }
+
+        public static void Sort(int[] array)
+        {
+            int[] helperArray = new int[array.Length];
+            int low = 0;
+            int high = array.Length - 1;
+            Sort(array, helperArray, low, high);
+        }
+
+    }
+}
+
+
+///old attempt at merge sort without using recursion, kind of worked for lists of sizes of powers of 2
+/*
+ public static List<int> Sort(List<int> list)
         {
             List<List<int>> listOfArrays = new List<List<int>>();
 
@@ -74,10 +134,7 @@ namespace GabrielCampbellEAE2420WeekThree
 
             return list;
         }
-
-
-    }
-}
+     */
 
 /*
   List<int[]> listOfArrays = new List<int[]>();
